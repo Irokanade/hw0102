@@ -9,17 +9,17 @@
 #include <stdio.h>
 
 int main() {
-    char oriText[1024] = {0};
-    char keyWord[1024] = {0};
-    char newWord[1024] = {0};
-    char newText[1024] = {0};
+    char oriText[1025] = {0};
+    char keyWord[1025] = {0};
+    char newWord[1025] = {0};
+    char newText[1025] = {0};
     
     printf("Please enter the original text:\n");
-    input(oriText, 1024);
+    input(oriText, 1025);
     printf("Keyword:\n");
-    input(keyWord, 1024);
+    input(keyWord, 1025);
     printf("New word:\n");
-    input(newWord, 1024);
+    input(newWord, 1025);
     
     textEdit(oriText, keyWord, newWord, newText);
     
