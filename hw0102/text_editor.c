@@ -25,6 +25,25 @@ char *input(char *string, int len) {
 }
 
 int textEdit(const char *oriText, const char *keyWord, const char *newWord, char *newText) {
+    char *pch = NULL;
+    char *lastPch = oriText;
+    
+    pch = strstr(oriText, keyWord);
+    
+    while(pch != NULL) {
+        strncat(newText, lastPch, pch-lastPch);
+        printf("newText: %s\n", newText);
+        strncat(newText, newWord, strlen(newWord));
+        lastPch = pch;
+        pch = strstr(lastPch += strlen(keyWord), keyWord);
+    }
+    
+    strncat(newText, lastPch, (oriText+strlen(oriText))-lastPch);
+    
+    return 0;
+}
+
+/*int textEdit(const char *oriText, const char *keyWord, const char *newWord, char *newText) {
     
     //printf("strlen(oriText): %lu\n", strlen(oriText));
     char *oriTextCopy = (char*)malloc(sizeof(char)*strlen(oriText));
@@ -46,4 +65,4 @@ int textEdit(const char *oriText, const char *keyWord, const char *newWord, char
     }
     
     return 0;
-}
+}*/
