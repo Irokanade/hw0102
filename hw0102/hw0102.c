@@ -30,7 +30,7 @@ int main() {
     printKeywordColour(oriText, keyWord, RED);
     printf("\n");
     printf("After:\n");
-    printKeywordColour(newText, keyWord, BLUE);
+    printKeywordColour(newText, newWord, BLUE);
     printf("\n");
     return 0;
 }
