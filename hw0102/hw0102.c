@@ -10,7 +10,6 @@
 
 #define RED "\e[1;91m"
 #define BLUE "\e[1;94m"
-#define RESET "\e[m"
 
 int main() {
     char oriText[1025] = {0};
@@ -31,7 +30,7 @@ int main() {
     printKeywordColour(oriText, keyWord, RED);
     printf("\n");
     printf("After:\n");
-    printKeywordColour(oriText, keyWord, BLUE);
+    printKeywordColour(newText, keyWord, BLUE);
     printf("\n");
     return 0;
 }
