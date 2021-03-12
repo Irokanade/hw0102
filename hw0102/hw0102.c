@@ -24,8 +24,10 @@ int main() {
     textEdit(oriText, keyWord, newWord, newText);
     
     printf("Before:\n");
-    printf("%s\n", oriText);
+    printKeywordColour(oriText, keyWord);
+    printf("\n");
     printf("After:\n");
     printf("%s\n", newText);
+    printf("\n");
     return 0;
 }
