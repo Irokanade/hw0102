@@ -12,6 +12,6 @@
 
 char *input(char *restrict, int);
 int textEdit(const char *oriText, const char *keyWord, const char *newWord, char *newText);
-int printKeywordColour(const char *oriText, const char *keyWord);
+int printKeywordColour(const char *oriText, const char *keyWord,char *colour);
 
 #endif /* text_editor_h */

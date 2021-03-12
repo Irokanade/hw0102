@@ -42,7 +42,7 @@ int textEdit(const char *oriText, const char *keyWord, const char *newWord, char
     return 0;
 }
 
-int printKeywordColour(const char *oriText, const char *keyWord) {
+int printKeywordColour(const char *oriText, const char *keyWord, char *colour) {
     char *pch = NULL;
     char *lastPch = oriText;
     char concatWord[2049] = {0};
@@ -52,7 +52,7 @@ int printKeywordColour(const char *oriText, const char *keyWord) {
     while(pch != NULL) {
         strncpy(concatWord, lastPch, pch-lastPch);
         printf("%s", concatWord);
-        printf("\033[0;31m");
+        printf("%s", colour);
         printf("%s", keyWord);
         printf("\033[0m");
         lastPch = pch;

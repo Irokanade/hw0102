@@ -8,6 +8,10 @@
 #include "text_editor.h"
 #include <stdio.h>
 
+#define RED "\e[1;91m"
+#define BLUE "\e[1;94m"
+#define RESET "\e[m"
+
 int main() {
     char oriText[1025] = {0};
     char keyWord[1025] = {0};
@@ -24,10 +28,10 @@ int main() {
     textEdit(oriText, keyWord, newWord, newText);
     
     printf("Before:\n");
-    printKeywordColour(oriText, keyWord);
+    printKeywordColour(oriText, keyWord, RED);
     printf("\n");
     printf("After:\n");
-    printf("%s\n", newText);
+    printKeywordColour(oriText, keyWord, BLUE);
     printf("\n");
     return 0;
 }
